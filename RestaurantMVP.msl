@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RestaurantMVPModelStoreContainer" CdmEntityContainer="RestaurantMVPEntities">
+    <EntitySetMapping Name="Alergenis">
+      <EntityTypeMapping TypeName="RestaurantMVPModel.Alergeni">
+        <MappingFragment StoreEntitySet="Alergeni">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="RestaurantMVPModel.Categorie">
+        <MappingFragment StoreEntitySet="Categorie">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nume" ColumnName="nume" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Comandas">
+      <EntityTypeMapping TypeName="RestaurantMVPModel.Comanda">
+        <MappingFragment StoreEntitySet="Comanda">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="fk_utilizator" ColumnName="fk_utilizator" />
+          <ScalarProperty Name="stare" ColumnName="stare" />
+          <ScalarProperty Name="timp_inregistrare" ColumnName="timp_inregistrare" />
+          <ScalarProperty Name="discount" ColumnName="discount" />
+          <ScalarProperty Name="cost_transport" ColumnName="cost_transport" />
+          <ScalarProperty Name="pret_total" ColumnName="pret_total" />
+          <ScalarProperty Name="ora_estimativa_livrare" ColumnName="ora_estimativa_livrare" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ComandaMenius">
+      <EntityTypeMapping TypeName="RestaurantMVPModel.ComandaMeniu">
+        <MappingFragment StoreEntitySet="ComandaMeniu">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="fk_comanda" ColumnName="fk_comanda" />
+          <ScalarProperty Name="fk_meniu" ColumnName="fk_meniu" />
+          <ScalarProperty Name="cantitate" ColumnName="cantitate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ComandaPreparats">
+      <EntityTypeMapping TypeName="RestaurantMVPModel.ComandaPreparat">
+        <MappingFragment StoreEntitySet="ComandaPreparat">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="fk_comanda" ColumnName="fk_comanda" />
+          <ScalarProperty Name="fk_preparat" ColumnName="fk_preparat" />
+          <ScalarProperty Name="cantitate" ColumnName="cantitate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Menius">
+      <EntityTypeMapping TypeName="RestaurantMVPModel.Meniu">
+        <MappingFragment StoreEntitySet="Meniu">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nume" ColumnName="nume" />
+          <ScalarProperty Name="fk_categorie" ColumnName="fk_categorie" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MeniuPreparats">
+      <EntityTypeMapping TypeName="RestaurantMVPModel.MeniuPreparat">
+        <MappingFragment StoreEntitySet="MeniuPreparat">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="fk_meniu" ColumnName="fk_meniu" />
+          <ScalarProperty Name="fk_preparat" ColumnName="fk_preparat" />
+          <ScalarProperty Name="cantitate" ColumnName="cantitate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Preparats">
+      <EntityTypeMapping TypeName="RestaurantMVPModel.Preparat">
+        <MappingFragment StoreEntitySet="Preparat">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nume" ColumnName="nume" />
+          <ScalarProperty Name="pret" ColumnName="pret" />
+          <ScalarProperty Name="unitate_masura" ColumnName="unitate_masura" />
+          <ScalarProperty Name="cantitate_per_portie" ColumnName="cantitate_per_portie" />
+          <ScalarProperty Name="cantitate_totala" ColumnName="cantitate_totala" />
+          <ScalarProperty Name="fk_categorie" ColumnName="fk_categorie" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PreparatAlergenis">
+      <EntityTypeMapping TypeName="RestaurantMVPModel.PreparatAlergeni">
+        <MappingFragment StoreEntitySet="PreparatAlergeni">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="fk_preparat" ColumnName="fk_preparat" />
+          <ScalarProperty Name="fk_alergeni" ColumnName="fk_alergeni" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Utilizators">
+      <EntityTypeMapping TypeName="RestaurantMVPModel.Utilizator">
+        <MappingFragment StoreEntitySet="Utilizator">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="prenume" ColumnName="prenume" />
+          <ScalarProperty Name="nume" ColumnName="nume" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="parola" ColumnName="parola" />
+          <ScalarProperty Name="telefon" ColumnName="telefon" />
+          <ScalarProperty Name="adresa" ColumnName="adresa" />
+          <ScalarProperty Name="angajat" ColumnName="angajat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="spAutentificareUtilizator" FunctionName="RestaurantMVPModel.Store.spAutentificareUtilizator">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RestaurantMVPModel.spAutentificareUtilizator_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="prenume" ColumnName="prenume" />
+          <ScalarProperty Name="nume" ColumnName="nume" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="parola" ColumnName="parola" />
+          <ScalarProperty Name="telefon" ColumnName="telefon" />
+          <ScalarProperty Name="adresa" ColumnName="adresa" />
+          <ScalarProperty Name="angajat" ColumnName="angajat" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spInregistrareUtilizator" FunctionName="RestaurantMVPModel.Store.spInregistrareUtilizator" />
+    <FunctionImportMapping FunctionImportName="spReturneazaCostTotalMeniu" FunctionName="RestaurantMVPModel.Store.spReturneazaCostTotalMeniu" />
+    <FunctionImportMapping FunctionImportName="spReturneazaPreparateleMeniului" FunctionName="RestaurantMVPModel.Store.spReturneazaPreparateleMeniului">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RestaurantMVPModel.spReturneazaPreparateleMeniului_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="cantitate" ColumnName="cantitate" />
+          <ScalarProperty Name="unitate_masura" ColumnName="unitate_masura" />
+          <ScalarProperty Name="pret" ColumnName="pret" />
+          <ScalarProperty Name="cantitate_totala" ColumnName="cantitate_totala" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spReturneazaStocMaximMeniu" FunctionName="RestaurantMVPModel.Store.spReturneazaStocMaximMeniu" />
+    <FunctionImportMapping FunctionImportName="spReturneazaStocMaximPreparat" FunctionName="RestaurantMVPModel.Store.spReturneazaStocMaximPreparat" />
+  </EntityContainerMapping>
+</Mapping>

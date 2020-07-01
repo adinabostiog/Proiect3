@@ -1,0 +1,14 @@
+﻿<Window x:Class="SiCuAstaPasta.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:SiCuAstaPasta" xmlns:views="clr-namespace:SiCuAstaPasta.Views" mc:Ignorable="d" Title="restaruant SI CU ASTA PASTA" Height="700" Width="900" WindowStartupLocation="CenterScreen" Background="White" ResizeMode="CanMinimize" Icon="icon.png">
+    <Grid>
+        <views:ConectareView x:Name="ConectareUC" Visibility="Visible"></views:ConectareView>
+        <views:InregistrareView x:Name="InregistrareUC" Visibility="Hidden"></views:InregistrareView>
+        <StackPanel>
+            <views:RestaurantBaraCautareView x:Name="BaraNavigareUC" Visibility="Hidden"></views:RestaurantBaraCautareView>
+            <Grid>
+                <views:RestaurantMeniuView x:Name="MeniuUC" Visibility="Hidden"></views:RestaurantMeniuView>
+                <views:RestaurantCosView x:Name="CosUC" Visibility="Hidden"></views:RestaurantCosView>
+                <views:RestaurantComenziView x:Name="ComenziUC" Visibility="Hidden"></views:RestaurantComenziView>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Window>

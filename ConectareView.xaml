@@ -1,0 +1,74 @@
+﻿<UserControl x:Class="SiCuAstaPasta.Views.ConectareView" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:local="clr-namespace:SiCuAstaPasta.Views" xmlns:viewModels="clr-namespace:SiCuAstaPasta.ViewModels" mc:Ignorable="d" d:DesignHeight="700" d:DesignWidth="900">
+
+    <UserControl.DataContext>
+        <viewModels:InregistrareConectareViewModel x:Name="ViewModel" />
+    </UserControl.DataContext>
+
+    <UserControl.Resources>
+        <ControlTemplate x:Key="ButtonTemplate" TargetType="{x:Type Button}">
+            <Border Background="{TemplateBinding Background}" BorderBrush="Transparent" BorderThickness="0">
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsEnabled" Value="True">
+                    <Setter Property="Background" Value="Transparent" />
+                    <Setter Property="FontFamily" Value="Microsoft YaHei UI" />
+                    <Setter Property="FontSize" Value="27" />
+                    <Setter Property="Foreground" Value="#FF444444" />
+                    <Setter Property="Height" Value="50" />
+                </Trigger>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FF444444" />
+                    <Setter Property="Foreground" Value="White" />
+                    <Setter Property="Cursor" Value="Hand" />
+                    <Setter Property="FontSize" Value="18" />
+                    <Setter Property="Height" Value="50" />
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+
+        <ControlTemplate x:Key="LabelTamplate" TargetType="{x:Type Label}">
+            <Border Background="{TemplateBinding Background}" BorderBrush="Transparent" BorderThickness="0">
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsEnabled" Value="True">
+                    <Setter Property="Background" Value="Transparent" />
+                    <Setter Property="FontFamily" Value="Microsoft YaHei UI" />
+                    <Setter Property="FontSize" Value="14" />
+                    <Setter Property="Foreground" Value="#FF444444" />
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+    </UserControl.Resources>
+
+    <Grid Margin="0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition>
+            </ColumnDefinition>
+            <ColumnDefinition>
+            </ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel Margin="30,30,30,350" Grid.Column="1" Grid.Row="0">
+            <TextBlock FontFamily="Palatino Linotype" Margin="0,10" FontSize="70" VerticalAlignment="Center" Foreground="#FF444444" Height="322">
+                Restaurant <LineBreak />
+                PASTA <LineBreak />
+              Near ME <LineBreak />
+            </TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Margin="30,350,30,30">
+            <Label Template="{StaticResource LabelTamplate}">Email</Label>
+            <TextBox x:Name="Email"></TextBox>
+            <Label Template="{StaticResource LabelTamplate}">Parola</Label>
+            <PasswordBox x:Name="Parola"></PasswordBox>
+            <StackPanel Margin="0, 25">
+                <Button Click="ConectareClick" Template="{StaticResource ButtonTemplate}">Conectare</Button>
+                <Button Click="IngregistrareClick" Template="{StaticResource ButtonTemplate}">Inregistrare</Button>
+                <Button Click="ContinuareClick" Template="{StaticResource ButtonTemplate}" Content="Continua fara cont" />
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Grid.Row="0" Grid.Column="0">
+            <Image Source="/SiCuAstaPasta;component/External/logo2.png" Visibility="Visible" Height="699" Stretch="UniformToFill" />
+        </StackPanel>
+    </Grid>
+</UserControl>
