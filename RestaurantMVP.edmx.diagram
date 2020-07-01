@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="651ba0fbbd3f4684b093de0da7844c9e" Name="Diagram1">
+        <EntityTypeShape EntityType="RestaurantMVPModel.Alergeni" Width="1.5" PointX="10" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RestaurantMVPModel.Categorie" Width="1.5" PointX="11.5" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RestaurantMVPModel.Comanda" Width="1.5" PointX="3.125" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RestaurantMVPModel.ComandaMeniu" Width="1.5" PointX="9.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RestaurantMVPModel.ComandaPreparat" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RestaurantMVPModel.Meniu" Width="1.5" PointX="6" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RestaurantMVPModel.MeniuPreparat" Width="1.5" PointX="5" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RestaurantMVPModel.Preparat" Width="1.5" PointX="0.5" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RestaurantMVPModel.PreparatAlergeni" Width="1.5" PointX="7.375" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RestaurantMVPModel.Utilizator" Width="1.5" PointX="0.5" PointY="0.5" IsExpanded="true" />
+        <AssociationConnector Association="RestaurantMVPModel.FK_PreparatAlergeni_Alergeni" ManuallyRouted="false" />
+        <AssociationConnector Association="RestaurantMVPModel.FK_Meniu_Categorie" ManuallyRouted="false" />
+        <AssociationConnector Association="RestaurantMVPModel.FK_Preparat_Categorie" ManuallyRouted="false" />
+        <AssociationConnector Association="RestaurantMVPModel.FK_Comanda_Utilizator" ManuallyRouted="false" />
+        <AssociationConnector Association="RestaurantMVPModel.FK_ComandaMeniu_Comanda" ManuallyRouted="false" />
+        <AssociationConnector Association="RestaurantMVPModel.FK_ComandaPreparat_Comanda" ManuallyRouted="false" />
+        <AssociationConnector Association="RestaurantMVPModel.FK_ComandaMeniu_Meniu1" ManuallyRouted="false" />
+        <AssociationConnector Association="RestaurantMVPModel.FK_ComandaPreparat_Preparat" ManuallyRouted="false" />
+        <AssociationConnector Association="RestaurantMVPModel.FK_MeniuPreparat_Meniu" ManuallyRouted="false" />
+        <AssociationConnector Association="RestaurantMVPModel.FK_MeniuPreparat_Preparat" ManuallyRouted="false" />
+        <AssociationConnector Association="RestaurantMVPModel.FK_PreparatAlergeni_Preparat" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
